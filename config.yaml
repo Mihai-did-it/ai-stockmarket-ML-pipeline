@@ -1,0 +1,194 @@
+# Stock Market ML Pipeline Configuration
+
+data:
+  # Tickers to analyze (can be extended)
+  tickers:
+    - AAPL
+    - MSFT
+    - GOOGL
+    - AMZN
+    - TSLA
+    - META
+    - NVDA
+    - JPM
+    - BAC
+    - WMT
+  
+  # Date range for historical data
+  start_date: "2015-01-01"
+  end_date: null  # null = today
+  
+  # Data sources
+  sources:
+    price_data: yfinance  # yfinance, alpha_vantage
+    fundamentals: yfinance  # yfinance, finnhub
+    news: newsapi  # newsapi, finnhub
+  
+  # Cache settings
+  cache_dir: data/raw
+  use_cache: true
+  cache_expiry_days: 7
+
+features:
+  # Technical indicators to calculate
+  technical_indicators:
+    # Trend Indicators
+    - SMA_10
+    - SMA_20
+    - SMA_50
+    - SMA_200
+    - EMA_12
+    - EMA_26
+    - MACD
+    - MACD_signal
+    - MACD_histogram
+    - ADX
+    - Aroon_up
+    - Aroon_down
+    - Parabolic_SAR
+    
+    # Momentum Indicators
+    - RSI
+    - Stochastic_K
+    - Stochastic_D
+    - CCI
+    - Williams_R
+    - ROC
+    - MOM
+    
+    # Volatility Indicators
+    - Bollinger_Upper
+    - Bollinger_Middle
+    - Bollinger_Lower
+    - Bollinger_Width
+    - ATR
+    - Keltner_Upper
+    - Keltner_Lower
+    
+    # Volume Indicators
+    - OBV
+    - Volume_SMA
+    - VWAP
+    - CMF
+    - MFI
+    - Force_Index
+    
+    # Additional
+    - Ichimoku_conversion
+    - Ichimoku_base
+    - Price_to_SMA50_ratio
+    - Price_to_SMA200_ratio
+  
+  # Fundamental features
+  fundamental_features:
+    - PE_ratio
+    - PB_ratio
+    - PS_ratio
+    - EPS
+    - Revenue_growth
+    - Profit_margin
+    - Operating_margin
+    - ROE
+    - ROA
+    - Debt_to_equity
+    - Current_ratio
+    - Quick_ratio
+    - Free_cash_flow
+    - Dividend_yield
+  
+  # Sentiment features
+  sentiment_features:
+    - news_sentiment_score
+    - news_sentiment_compound
+    - news_volume_7d
+    - news_volume_30d
+  
+  # Feature engineering
+  lag_features:
+    enabled: true
+    lags: [1, 2, 3, 5, 10, 20]  # Days to look back
+  
+  rolling_features:
+    enabled: true
+    windows: [5, 10, 20, 50]  # Rolling window sizes
+  
+  # Target variable configuration
+  target:
+    type: classification  # classification or regression
+    horizon: 5  # Days ahead to predict
+    threshold_buy: 0.02  # 2% gain
+    threshold_sell: -0.02  # 2% loss
+    # Returns between thresholds = HOLD
+
+model:
+  # Model type: lightgbm, xgboost, catboost, ensemble
+  algorithm: lightgbm
+  
+  # Train/validation/test split
+  train_size: 0.7
+  validation_size: 0.15
+  test_size: 0.15
+  
+  # Time-series split for cross-validation
+  cv_splits: 5
+  
+  # Hyperparameter optimization
+  hyperparameter_tuning:
+    enabled: true
+    method: optuna  # optuna, grid_search, random_search
+    n_trials: 100
+    timeout_hours: 2
+  
+  # Class imbalance handling
+  handle_imbalance:
+    method: smote  # smote, class_weights, undersampling, none
+  
+  # Feature selection
+  feature_selection:
+    enabled: true
+    method: importance  # importance, mutual_info, recursive
+    top_n_features: 50
+  
+  # Model calibration
+  calibration:
+    enabled: true
+    method: isotonic  # isotonic, sigmoid
+
+backtesting:
+  # Initial portfolio value
+  initial_capital: 100000
+  
+  # Trading strategy
+  strategy:
+    confidence_threshold: 0.6  # Minimum probability to act
+    position_sizing: equal_weight  # equal_weight, risk_parity, kelly
+    max_positions: 10
+    stop_loss: 0.05  # 5%
+    take_profit: 0.15  # 15%
+  
+  # Transaction costs
+  transaction_cost: 0.001  # 0.1% per trade
+  slippage: 0.0005  # 0.05%
+  
+  # Performance metrics to calculate
+  metrics:
+    - total_return
+    - annualized_return
+    - sharpe_ratio
+    - sortino_ratio
+    - max_drawdown
+    - win_rate
+    - profit_factor
+    - calmar_ratio
+
+logging:
+  level: INFO  # DEBUG, INFO, WARNING, ERROR
+  log_dir: logs
+  save_predictions: true
+  save_feature_importance: true
+  save_shap_values: true
+
+execution:
+  random_seed: 42
+  n_jobs: -1  # -1 = use all CPU cores
+  verbose: 1
