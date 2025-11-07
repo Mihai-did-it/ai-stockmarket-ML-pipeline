@@ -1,6 +1,9 @@
 """
 Main Pipeline Orchestrator
 Coordinates the entire ML pipeline from data ingestion to backtesting.
+
+Personal project by Mihai Lache
+Developed as part of Master's degree in AI and Machine Learning
 """
 
 import argparse

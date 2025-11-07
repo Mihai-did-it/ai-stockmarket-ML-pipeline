@@ -1,6 +1,8 @@
-# 💡 Suggestions for Improving This Project
+# 💡 Future Improvements & Extensions
 
-This document provides concrete suggestions for enhancing the Stock Market ML Pipeline, organized by difficulty level. These are great ideas to discuss in interviews when asked "How would you improve this?"
+This document outlines my ideas for enhancing this Stock Market ML Pipeline, organized by difficulty level. These are directions I'm considering for future development and great talking points for interviews when asked "How would you improve your project?"
+
+> **Note**: As the creator of this project, I designed it to be extensible. Here are the improvements I'm planning or would implement given more time.
 
 ---
 

@@ -1,4 +1,6 @@
 # Stock Market ML Pipeline Configuration
+# Personal project by Mihai Lache
+# Configuration file for the AI Stock Market Analysis system
 
 data:
   # Tickers to analyze (can be extended)

@@ -1,6 +1,8 @@
 # Setup & Getting Started Guide
 
-This guide will help you get the Stock Market ML Pipeline up and running quickly.
+This guide will help you get my Stock Market ML Pipeline up and running quickly.
+
+> **About This Project**: I developed this system as a personal project to demonstrate my ML engineering skills and understanding of financial markets. Feel free to explore, experiment, and learn from the code!
 
 ## Prerequisites
 

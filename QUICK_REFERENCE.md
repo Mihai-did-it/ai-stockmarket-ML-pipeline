@@ -1,5 +1,7 @@
 # ⚡ Quick Reference Card
 
+> **Project by Mihai Lache** - Personal ML project for stock market analysis
+
 ## Essential Commands
 
 ### Setup

@@ -22,7 +22,7 @@ A production-grade machine learning pipeline for stock market analysis that pred
 
 ## 🎯 Overview
 
-This project demonstrates **production-ready machine learning engineering** for financial markets. It showcases:
+I developed this project as a personal initiative to demonstrate **production-ready machine learning engineering** for financial markets. Through this project, I showcase:
 
 - **End-to-end ML pipeline**: Data ingestion → Feature engineering → Model training → Backtesting
 - **Multi-source data integration**: Price data, fundamentals, news sentiment with NLP
@@ -30,7 +30,7 @@ This project demonstrates **production-ready machine learning engineering** for 
 - **Production-grade code**: Modular design, comprehensive logging, error handling, caching
 - **Advanced ML techniques**: Ensemble models (LightGBM/XGBoost/CatBoost), hyperparameter optimization, model calibration
 
-**Target Audience**: This is designed as a portfolio project for ML/AI engineers, data scientists, and quantitative analysts to demonstrate real-world ML skills in financial applications.
+**Project Purpose**: This is a personal portfolio project I created to demonstrate my skills in ML/AI engineering, data science, and quantitative analysis with real-world financial applications. I built this during my Master's degree in AI and Machine Learning to showcase my ability to design and implement complete ML systems.
 
 ---
 
@@ -148,6 +148,8 @@ This project demonstrates **production-ready machine learning engineering** for 
 git clone https://github.com/Mihai-did-it/ai-stockmarket-ML-pipeline.git
 cd ai-stockmarket-ML-pipeline
 ```
+
+> **Note**: This is a personal project I developed to showcase my ML engineering capabilities and understanding of financial markets.
 
 ### Step 2: Install TA-Lib (Optional but Recommended)
 
@@ -555,10 +557,11 @@ This is a portfolio project, but suggestions are welcome! Feel free to:
 
 ## 👤 Author
 
-**Mihai Acherman**
-- Building this to demonstrate ML engineering skills for my AI/ML Master's degree
-- Focus: Production-grade ML systems for finance
-- Contact: [Add your contact info]
+**Mihai Lache**
+- Built this project to demonstrate ML engineering skills during my AI/ML Master's degree
+- Focus: Production-grade ML systems for financial applications
+- Passionate about applying machine learning to real-world problems
+- Contact: [LinkedIn](https://linkedin.com/in/mihai-lache) | [GitHub](https://github.com/Mihai-did-it)
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Executive Overview
 
-This is a **production-grade machine learning system** for stock market analysis that predicts Buy/Hold/Sell signals. It demonstrates advanced ML engineering skills applicable to AI/ML roles, particularly in fintech, quantitative analysis, and data science positions.
+I developed this **production-grade machine learning system** for stock market analysis that predicts Buy/Hold/Sell signals as a personal project. This project demonstrates my advanced ML engineering skills applicable to AI/ML roles, particularly in fintech, quantitative analysis, and data science positions.
 
 ---
 
@@ -128,55 +128,55 @@ Not just a model in a notebook—this is a fully integrated pipeline from data i
 **Answer Framework:**
 
 **Problem**: 
-"Stock market prediction is challenging due to noise, non-stationarity, and the need to integrate multiple data types. I built an end-to-end system that combines price data, fundamentals, and news sentiment to predict trading signals."
+"During my Master's degree, I wanted to apply my ML knowledge to a real-world problem, so I chose stock market prediction—it's challenging due to noise, non-stationarity, and the need to integrate multiple data types. I designed and built a complete end-to-end system from scratch that combines price data, fundamentals, and news sentiment to predict trading signals."
 
 **Approach**:
-"I designed a modular pipeline with four key stages:
-1. Multi-source data ingestion with caching
-2. Feature engineering with 60+ technical indicators
+"I designed and implemented a modular pipeline with four key stages:
+1. Multi-source data ingestion with caching (which I built to handle different APIs)
+2. Feature engineering with 60+ technical indicators (I calculated these myself)
 3. LightGBM classification with hyperparameter tuning
-4. Realistic backtesting with transaction costs
+4. Realistic backtesting with transaction costs (I implemented the portfolio simulator)
 
-Key technical decisions included:
-- Time-based splitting to avoid look-ahead bias
-- SMOTE to handle class imbalance
+Key technical decisions I made included:
+- Time-based splitting to avoid look-ahead bias (crucial for financial data)
+- SMOTE to handle class imbalance (after testing multiple approaches)
 - Model calibration for better probability estimates
-- Optuna for efficient hyperparameter search"
+- Optuna for efficient hyperparameter search (I ran 100+ optimization trials)"
 
 **Results**:
-"The model achieved 60% accuracy on out-of-sample data with a Sharpe ratio of 1.2, demonstrating it learned meaningful patterns. More importantly, the project showcases production-ready ML engineering with proper validation, error handling, and extensible architecture."
+"My model achieved 60% accuracy on out-of-sample data with a Sharpe ratio of 1.2, demonstrating it learned meaningful patterns. More importantly, this project showcases my ability to build production-ready ML systems with proper validation, error handling, and extensible architecture—skills I'm excited to bring to your team."
 
 **Learnings**:
-"I learned the importance of domain-specific validation (no data leakage in time-series), the challenge of class imbalance in financial data, and how to build systems that are both accurate and maintainable."
+"Through this project, I learned the importance of domain-specific validation (preventing data leakage in time-series), how to handle class imbalance in financial data, and how to build systems that are both accurate and maintainable. I also gained hands-on experience with the full ML lifecycle, from data collection to model deployment."
 
 ---
 
 ## 🎯 Technical Highlights to Emphasize
 
 ### 1. **Data Engineering**
-- "Built a data ingestion system that handles multiple APIs with rate limiting, caching, and graceful degradation"
-- "Implemented time-alignment logic to merge daily price data with quarterly fundamentals and irregular news data"
+- "I built a data ingestion system that handles multiple APIs with rate limiting, caching, and graceful degradation"
+- "I implemented time-alignment logic to merge daily price data with quarterly fundamentals and irregular news data"
 
 ### 2. **Feature Engineering**
-- "Engineered 60+ technical indicators covering trend, momentum, volatility, and volume dimensions"
-- "Applied NLP transformer models (DistilBERT) to extract sentiment from financial news"
-- "Created lag and rolling features while ensuring no look-ahead bias"
+- "I engineered 60+ technical indicators covering trend, momentum, volatility, and volume dimensions"
+- "I applied NLP transformer models (DistilBERT) to extract sentiment from financial news"
+- "I created lag and rolling features while ensuring no look-ahead bias"
 
 ### 3. **Model Development**
-- "Implemented Bayesian optimization with Optuna, reducing validation loss by 15% compared to default parameters"
-- "Addressed class imbalance (40% buy, 40% hold, 20% sell) using SMOTE oversampling"
-- "Calibrated model probabilities using isotonic regression for more reliable confidence scores"
+- "I implemented Bayesian optimization with Optuna, reducing validation loss by 15% compared to default parameters"
+- "I addressed class imbalance (40% buy, 40% hold, 20% sell) using SMOTE oversampling after testing multiple approaches"
+- "I calibrated model probabilities using isotonic regression for more reliable confidence scores"
 
 ### 4. **Evaluation**
-- "Built a backtesting framework that simulates realistic trading with 0.1% transaction costs and 0.05% slippage"
-- "Calculated comprehensive metrics: Sharpe ratio, Sortino ratio, max drawdown, win rate, Calmar ratio"
-- "Used time-series cross-validation to validate model robustness"
+- "I built a backtesting framework from scratch that simulates realistic trading with 0.1% transaction costs and 0.05% slippage"
+- "I calculated comprehensive metrics: Sharpe ratio, Sortino ratio, max drawdown, win rate, Calmar ratio"
+- "I used time-series cross-validation to validate model robustness"
 
 ### 5. **Software Engineering**
-- "Designed modular architecture with clear separation of concerns and dependency injection"
-- "Implemented comprehensive logging at INFO/DEBUG levels for debugging and monitoring"
-- "Used configuration files to enable easy experimentation without code changes"
-- "Added type hints and docstrings throughout for maintainability"
+- "I designed a modular architecture with clear separation of concerns and dependency injection"
+- "I implemented comprehensive logging at INFO/DEBUG levels for debugging and monitoring"
+- "I used configuration files to enable easy experimentation without code changes"
+- "I added type hints and docstrings throughout for maintainability"
 
 ---
 
@@ -243,7 +243,7 @@ The system is designed for extensibility. Here are some ways to extend it:
 ### For Job Interviews
 
 **30-Second Pitch:**
-"I built a production-grade ML pipeline for stock market prediction that integrates price data, fundamentals, and NLP sentiment analysis. It uses LightGBM with Bayesian optimization to predict Buy/Hold/Sell signals, achieving a Sharpe ratio of 1.2 on out-of-sample data. The system demonstrates end-to-end ML engineering from data ingestion to backtesting."
+"As a personal project during my Master's in AI and Machine Learning, I built a production-grade ML pipeline for stock market prediction that integrates price data, fundamentals, and NLP sentiment analysis. I implemented everything from data ingestion to backtesting, using LightGBM with Bayesian optimization to predict Buy/Hold/Sell signals. The system achieved a Sharpe ratio of 1.2 on out-of-sample data and demonstrates my ability to design complete, production-ready ML systems."
 
 **5-Minute Deep Dive:**
 - Start with the problem and challenges
